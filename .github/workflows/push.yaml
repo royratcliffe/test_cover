@@ -19,6 +19,8 @@ jobs:
 
       - name: Test coverage
         run: |
+          :- attach_packs(..).
+          :- pack_list_installed.
           :- [library(test_cover)].
           :- show_coverage(run_tests).
         shell: swipl -s {0} -t halt
