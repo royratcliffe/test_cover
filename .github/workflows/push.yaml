@@ -7,5 +7,12 @@ jobs:
 
     steps:
 
+      - name: Install SWI-Prolog
+        run: |
+          sudo apt-get install -y software-properties-common
+          sudo apt-add-repository ppa:swi-prolog/devel
+          sudo apt-get update
+          sudo apt-get install -y swi-prolog-nox
+
       - name: Test coverage
         run: swipl -g "[library(test_cover)]" -t "show_coverage(run_tests)"
