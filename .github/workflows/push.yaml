@@ -8,6 +8,7 @@ jobs:
     steps:
 
       # https://www.swi-prolog.org/build/PPA.html
+      # https://launchpad.net/~swi-prolog/+archive/ubuntu/devel
       - name: Install SWI-Prolog development version
         run: |
           sudo apt-get install -y software-properties-common
