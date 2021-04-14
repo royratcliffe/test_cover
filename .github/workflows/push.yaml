@@ -1,0 +1,10 @@
+on: [push]
+
+jobs:
+
+  test:
+
+    steps:
+
+      - name: Test coverage
+        run: swipl -g "[library(test_cover)]" -t "show_coverage(run_tests)"
