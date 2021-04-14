@@ -21,4 +21,4 @@ jobs:
         run: |
           :- [library(test_cover)].
           :- show_coverage(run_tests).
-        shell: swipl -s {0}
+        shell: swipl -s {0} -t halt
