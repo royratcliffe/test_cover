@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
 
-  test:
+  test-cover:
     runs-on: ubuntu-latest
 
     steps:
