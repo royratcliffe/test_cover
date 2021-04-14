@@ -19,7 +19,7 @@ jobs:
 
       - name: Test coverage
         run: |
-          :- attach_packs(..).
+          :- attach_packs(.).
           :- pack_list_installed.
           :- [library(test_cover)].
           :- show_coverage(run_tests).
