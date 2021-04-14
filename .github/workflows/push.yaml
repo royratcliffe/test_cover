@@ -18,4 +18,7 @@ jobs:
           sudo apt-get install -y swi-prolog=8.3.22-2-gedd88f570-focalppa2
 
       - name: Test coverage
-        run: swipl -g "[library(test_cover)]" -t "show_coverage(run_tests)"
+        run: |
+          :- [library(test_cover)].
+          :- show_coverage(run_tests).
+        shell: swipl -s {0}
