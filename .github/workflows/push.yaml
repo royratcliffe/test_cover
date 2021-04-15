@@ -28,3 +28,8 @@ jobs:
           :- [library(test_cover)].
           :- show_coverage(run_tests).
         shell: swipl -s {0} -t halt
+
+      - name: Codecov
+        uses: codecov/codecov-action@v1
+          with:
+            token: ${{ secrets.CODECOV_TOKEN }}
