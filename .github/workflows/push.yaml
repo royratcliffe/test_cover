@@ -17,6 +17,9 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y swi-prolog=8.3.22-2-gedd88f570-focalppa2
 
+      - name: Check installation
+        run: swipl -t check_installation
+
       - name: Test coverage
         run: |
           :- pwd.
